@@ -13,6 +13,7 @@
         "artesaos/seotools": "^0.12.1",
         "backpack/crud": "^3.5",
         "backpack/langfilemanager": "^1.0",
+        "backpack/logmanager": "^2.3",
         "backpack/settings": "^2.1",
         "barryvdh/laravel-elfinder": "^0.4.1",
         "barryvdh/laravel-ide-helper": "^2.6",

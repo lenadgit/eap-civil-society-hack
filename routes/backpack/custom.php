@@ -14,5 +14,10 @@ Route::group([
 
     CRUD::resource('article', 'ArticleCrudController');
     CRUD::resource('articlecategory', 'ArticleCategoryCrudController');
+    CRUD::resource('faq', 'FaqCrudController');
+    CRUD::resource('feedback', 'FeedbackCrudController');
+    CRUD::resource('page', 'PageCrudController');
+    CRUD::resource('partner', 'PartnerCrudController');
+    CRUD::resource('admin', 'UserCrudController');
 
 });

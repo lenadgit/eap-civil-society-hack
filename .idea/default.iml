@@ -11,6 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/backpack/crud" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/backpack/generators" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/backpack/langfilemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/backpack/logmanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/backpack/settings" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/elfinder-flysystem-driver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-debugbar" />
