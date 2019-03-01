@@ -32,3 +32,118 @@ $factory->define(App\Models\Admin::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+$factory->define(App\Models\Faq::class, function (Faker $faker) {
+    $fakeQuestion = $faker->sentence(3);
+    $fakeAnswer = $faker->realText();
+
+    $name = [
+        'az' => $fakeQuestion,
+        'en' => $fakeQuestion,
+        'ru' => $fakeQuestion,
+    ];
+
+    $answer = [
+        'az' => $fakeAnswer,
+        'en' => $fakeAnswer,
+        'ru' => $fakeAnswer,
+    ];
+
+    return [
+        'question' => $name,
+        'answer'   => $answer,
+    ];
+});
+
+$factory->define(App\Models\Feedback::class, function (Faker $faker) {
+    return [
+        'image'    => $faker->imageUrl($width = 120, $height = 120),
+        'feedback' => $faker->text(100),
+        'name'     => $faker->name(),
+        'position' => $faker->jobTitle(),
+    ];
+});
+
+$factory->define(App\Models\Partner::class, function (Faker $faker) {
+
+    $name = [
+        'az' => $faker->text(5),
+        'en' => $faker->text(5),
+    ];
+
+    return [
+        'image'    => $faker->imageUrl($width = 120, $height = 120),
+        'name' => $name,
+        'url' => $faker->url,
+    ];
+});
+
+$factory->define(App\Models\Article::class, function (Faker $faker) {
+    return [
+        'image'             => $faker->imageUrl($width = 550, $height = 309),
+        'title'             => $faker->text($maxNbChars = 50),
+        'description'       => $faker->text(2000),
+        'slug'              => $faker->slug(),
+        'status'            => $faker->randomElement($array = ['PUBLISHED', 'DRAFT']),
+        'category_id'       => rand(1, 10),
+    ];
+});
+
+$factory->define(App\Models\ArticleCategory::class, function (Faker $faker) {
+
+    $name = [
+        'az' => $faker->text(10),
+        'en' => $faker->text(10),
+    ];
+
+    $slug = [
+        'az' => $faker->slug,
+        'en' => $faker->slug,
+    ];
+
+    return [
+        'name'     => $name,
+        'slug'     => $slug,
+    ];
+});
+
+$factory->define(App\Models\Page::class, function (Faker $faker) {
+    $images = [];
+    for($i = 0; $i < 20; $i++) {
+        array_push($images, $faker->imageUrl());
+    }
+
+    $title = [
+        'az' => $faker->text(5),
+        'en' => $faker->text(5),
+    ];
+
+    $short_description = [
+        'az' => $faker->text(50),
+        'en' => $faker->text(50),
+    ];
+
+    $slug = [
+        'az' => $faker->slug,
+        'en' => $faker->slug,
+    ];
+    $body = [
+        'az' => $faker->text(100),
+        'en' => $faker->text(100),
+    ];
+
+    $type = ['portfolio', 'services', 'page'];
+
+
+
+    return [
+        'key'    => $faker->word . uniqid(),
+        'type' => $type[rand(0, 2)],
+        'title' => $title,
+        'icon'    => $faker->imageUrl($width = 120, $height = 120),
+        'short_description' => $short_description,
+        'slug' => $slug,
+        'body' => $body,
+        'images' => $images,
+    ];
+});

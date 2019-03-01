@@ -100,6 +100,7 @@ class SettingsTableSeeder extends Seeder
         ],
 
 
+
     ];
 
     /**

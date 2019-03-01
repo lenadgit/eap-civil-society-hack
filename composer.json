@@ -15,6 +15,7 @@
         "backpack/langfilemanager": "^1.0",
         "backpack/settings": "^2.1",
         "barryvdh/laravel-elfinder": "^0.4.1",
+        "barryvdh/laravel-ide-helper": "^2.6",
         "cviebrock/eloquent-sluggable": "^4.6",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
@@ -24,6 +25,7 @@
     },
     "require-dev": {
         "backpack/generators": "^1.2",
+        "barryvdh/laravel-debugbar": "^3.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
@@ -43,6 +45,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/Http/Helper.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },

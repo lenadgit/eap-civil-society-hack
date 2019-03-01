@@ -12,6 +12,7 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () {
 
-//    CRUD::resource('roadmap', 'RoadmapCrudController');
+    CRUD::resource('article', 'ArticleCrudController');
+    CRUD::resource('articlecategory', 'ArticleCategoryCrudController');
 
 });
