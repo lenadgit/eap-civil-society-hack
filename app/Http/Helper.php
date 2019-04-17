@@ -11,7 +11,7 @@ if (!function_exists('cutWords')) {
      */
     function cutWords($value, $words = 100, $end = '...')
     {
-        return \Illuminate\Support\Str::words($value, $words, $end);
+        return \Illuminate\Support\Str::words(strip_tags($value), $words, $end);
     }
 }
 
