@@ -15,14 +15,31 @@ class DatabaseSeeder extends Seeder
         factory(\App\Models\Faq::class, 10)->create();
         factory(\App\Models\Feedback::class, 6)->create();
         factory(\App\Models\Partner::class, 6)->create();
-        factory(\App\Models\Article::class, 30)->create();
         factory(\App\Models\ArticleCategory::class, 10)->create();
+        factory(\App\Models\Article::class, 30)->create();
         factory(\App\Models\Page::class, 5)->create();
 
+
+        /****** SEED CATEGORIES TABLE FOR PARENT_ID ******/
+        $categories = \App\Models\ArticleCategory::all()->pluck('id');
+
+        /****** END SEEDING ******/
+
+        /****** SEED PIVOT TABLE ******/
+        $categories = \App\Models\ArticleCategory::all();
+
+        \App\Models\Article::all()->each(function ($article) use ($categories) {
+            $article->categories()->attach(
+                $categories->random(rand(1, 3))->pluck('id')->toArray()
+            );
+        });
+        /****** END SEEDING ******/
 
         $this->call([
             SettingsTableSeeder::class,
             LanguageTableSeeder::class,
         ]);
+
+
     }
 }

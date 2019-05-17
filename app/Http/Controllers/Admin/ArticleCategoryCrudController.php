@@ -49,6 +49,15 @@ class ArticleCategoryCrudController extends CrudController
                 'name'  => 'slug',
                 'label' => 'Slug',
             ],
+
+            [
+                'label'     => 'Parent',
+                'type'      => 'select',
+                'name'      => 'parent_id',
+                'entity'    => 'parent',
+                'attribute' => 'name',
+                'model'     => 'App\Models\ArticleCategory',
+            ],
         ]);
 
         $this->crud->addFields([
@@ -64,8 +73,18 @@ class ArticleCategoryCrudController extends CrudController
                 'hint' => '<span style="color: purple">Leave it blank in order to automate the process!</span>',
             ],
 
+            [
+                'label'     => 'Parent',
+                'type'      => 'select2',
+                'name'      => 'parent_id',
+                'entity'    => 'parent',
+                'attribute' => 'name',
+                'model'     => 'App\Models\ArticleCategory',
+            ],
+
         ]);
 
+//        dd($this->crud->model);
         // add asterisk for fields that are required in ArticleCategoryRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');

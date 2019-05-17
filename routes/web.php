@@ -19,8 +19,10 @@ Route::group([
     'namespace' => 'Front',
 ], function () {
     Route::get('/', 'PagesController@index');
-//    Route::get('blog', 'MainController@blog')->name('blog');
-//    Route::get('category/{slug}', 'MainController@category')->name('category');
-//    Route::get('article/{slug}', 'MainController@article')->name('article');
+    Route::get('articles', 'ArticlesController@index')->name('articles');
+    Route::get('article/{slug}', 'ArticlesController@detailed')->name('article');
+    Route::get('category/{slug}', 'ArticlesController@category')->name('category');
+    Route::get('p/{slug}', 'PagesController@pages')->name('page');
+
 //    Route::get('faq', 'MainController@faq')->name('faq');
 });

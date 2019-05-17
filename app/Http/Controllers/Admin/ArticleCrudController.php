@@ -26,7 +26,8 @@ class ArticleCrudController extends CrudController
         $this->crud->setModel('App\Models\Article');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/article');
         $this->crud->setEntityNameStrings('article', 'articles');
-        $this->crud->orderBy('id', 'DESC');
+        $this->crud->orderBy('id', 'desc');
+        $this->crud->allowAccess('show');
 
         /*
         |--------------------------------------------------------------------------
@@ -42,8 +43,9 @@ class ArticleCrudController extends CrudController
 
             [
                 'name'  => 'image',
-                'label' => 'image',
+                'label' => "Cover",
                 'type'  => 'image',
+                'width' => '60px',
             ],
 
             [
@@ -51,24 +53,17 @@ class ArticleCrudController extends CrudController
                 'label' => 'Title',
             ],
 
-            [
-                'label'       => "Category", // Table column heading
-                'type'        => "select",
-                'name'        => 'category_id', // the column that contains the ID of that connected entity;
-                'entity'      => 'category', // the method that defines the relationship in your Model
-                'attribute'   => "name", // foreign key attribute that is shown to user
-                'model'       => "App\Models\Category", // foreign key model
-                'searchLogic' => function ($query, $column, $searchTerm) {
-                    $query->orWhereHas('category', function ($q) use ($column, $searchTerm) {
-                        $q->where('name', 'like', '%' . $searchTerm . '%');
-                    });
-                },
-            ],
 
             [
                 'name'  => 'status',
                 'label' => 'Status',
                 'type'  => 'enum',
+            ],
+
+            [
+                'name'  => 'featured',
+                'label' => 'Featured',
+                'type'  => 'check',
             ],
 
         ]);
@@ -84,33 +79,51 @@ class ArticleCrudController extends CrudController
             [
                 'name'  => 'title',
                 'label' => 'Title',
+                'type'        => 'text',
+                'placeholder' => 'Your title here',
             ],
+
+            [
+                'name'     => 'slug',
+                'label'    => 'Slug (URL)',
+                'type'     => 'text',
+                'hint'     => 'Will be automatically generated from your title, if left empty.',
+                'disabled' => 'disabled',
+                'wrapperAttributes' => [
+                    'class' => 'form-group col-md-7'
+                ],
+            ],
+
+            [
+                'name'  => 'date',
+                'label' => 'Publish article at:',
+                'type'  => 'datetime_picker',
+                'allows_null' => true,
+                'default' => now(),
+                'wrapperAttributes' => [
+                    'class' => 'form-group col-md-5'
+                ],
+            ],
+
 
             [
                 'name'  => 'description',
                 'label' => "Content",
                 'type'  => 'ckeditor',
+                'placeholder' => 'A Content text here',
             ],
 
             [
-                'label'     => "Category",
-                'type'      => "select2",
-                'name'      => 'category_id',
-                'entity'    => 'category',
-                'attribute' => "name",
-                'model'     => "App\Models\ArticleCategory",
-            ],
-
-            [
-                'label'             => "Category",
-                'type'              => "select2",
-                'name'              => 'category_id',
-                'entity'            => 'category',
-                'attribute'         => "name",
-                'model'             => "App\Models\ArticleCategory",
+                'label'     => 'Category',
+                'type'      => 'select2_multiple',
+                'name'      => 'categories',
+                'entity'    => 'categories',
+                'attribute' => 'name',
+                'model'     => 'App\Models\ArticleCategory',
+                'pivot'     => true,
                 'wrapperAttributes' => [
-                    'class' => 'form-group col-md-6',
-                ],
+                    'class' => 'form-group col-md-6'
+                ]
             ],
 
             [
@@ -122,6 +135,16 @@ class ArticleCrudController extends CrudController
                 ],
             ],
 
+            [
+                'name'  => 'featured',
+                'label' => 'Featured item',
+                'type'  => 'checkbox',
+                'wrapperAttributes' => [
+                    'class' => 'form-group col-md-6'
+                ]
+
+            ],
+
         ]);
 
         // add asterisk for fields that are required in ArticleRequest
@@ -131,6 +154,7 @@ class ArticleCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
+
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here

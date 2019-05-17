@@ -18,7 +18,9 @@ class ArticleCategory extends Model
     use Slugit;
 
 
-    protected $fillable = ['name', 'slug'];
+    protected $table = 'article_categories';
+    protected $primaryKey = 'id';
+    protected $fillable = ['name', 'slug', 'parent_id'];
 
     /*
     |--------------------------------------------------------------------------
@@ -40,8 +42,19 @@ class ArticleCategory extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function articles() {
-        return $this->hasMany(Article::class, 'category_id');
+    public function parent()
+    {
+        return $this->belongsTo(ArticleCategory::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(ArticleCategory::class, 'parent_id');
+    }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class, 'article_category', 'category_id', 'article_id');
     }
 
 

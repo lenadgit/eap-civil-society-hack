@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Models\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -37,4 +38,18 @@ class PagesController extends Controller
         ]);
 
     }
+
+    public function pages($slug)
+    {
+        $page = Page::FindBySlug($slug)->first();
+        if (!$page) {
+            $page = Page::FindBySlugLocale($slug)->first();
+            if (!$page) {
+                abort(404);
+            }
+        }
+
+        return view('pages.pages', compact('page'));
+    }
+
 }

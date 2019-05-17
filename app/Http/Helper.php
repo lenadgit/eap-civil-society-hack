@@ -59,6 +59,33 @@ if (! function_exists('reading_time')) {
     }
 }
 
+if (! function_exists('removeHttp')) {
+    function removeHttp($url)
+    {
+        $disallowed = ['http://', 'https://', 'http:/', 'htpp://', 'https:/', 'htp://', 'htps://', 'htpp://', 'htpps://'];
+        foreach ($disallowed as $d) {
+            if (strpos($url, $d) === 0) {
+                return str_replace($d, '', $url);
+            }
+        }
+
+        return $url;
+    }
+}
+
+if (! function_exists('getDomain')) {
+    function getDomain($url)
+    {
+        $pieces = parse_url('http://' . removeHttp($url));
+        $domain = isset($pieces['host']) ? $pieces['host'] : '';
+
+        if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+            return $regs['domain'];
+        }
+
+        return false;
+    }
+}
 
 
 

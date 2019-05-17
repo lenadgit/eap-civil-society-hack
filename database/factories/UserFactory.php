@@ -85,7 +85,6 @@ $factory->define(App\Models\Article::class, function (Faker $faker) {
         'description'       => $faker->text(2000),
         'slug'              => $faker->slug(),
         'status'            => $faker->randomElement($array = ['PUBLISHED', 'DRAFT']),
-        'category_id'       => rand(1, 10),
     ];
 });
 

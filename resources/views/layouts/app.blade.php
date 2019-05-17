@@ -1,5 +1,5 @@
-{{--@include('inc.header')--}}
+@include('inc.header')
 
-{{--@yield('content')--}}
+@yield('content')
 
-{{--@include('inc.footer')--}}
+@include('inc.footer')
