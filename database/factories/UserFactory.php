@@ -146,3 +146,23 @@ $factory->define(App\Models\Page::class, function (Faker $faker) {
         'images' => $images,
     ];
 });
+
+$factory->define(App\Models\Slider::class, function (Faker $faker) {
+    return [
+        'small_title' => $faker->text(10),
+        'big_title' => $faker->text(6),
+        'text' => $faker->text(20),
+        'button_label' => 'Read More',
+        'button_url' => $faker->url,
+        'image' => $faker->imageUrl($width = 1920, $height = 801),
+    ];
+});
+
+$factory->define(App\Models\Application::class, function (Faker $faker) {
+    return [
+        'full_name'  => $faker->firstName . ' ' . $faker->lastName,
+        'email'       => $faker->email,
+        'phone'       => $faker->phoneNumber,
+        'message'    => $faker->text(100),
+    ];
+});

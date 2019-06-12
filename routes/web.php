@@ -22,7 +22,13 @@ Route::group([
     Route::get('articles', 'ArticlesController@index')->name('articles');
     Route::get('article/{slug}', 'ArticlesController@detailed')->name('article');
     Route::get('category/{slug}', 'ArticlesController@category')->name('category');
-    Route::get('p/{slug}', 'PagesController@pages')->name('page');
+
+    Route::post('apply', 'PagesController@application')->name('apply');
+    Route::post('sendmail', 'PagesController@sendmail')->name('sendmail');
+
+//    require_once 'user.php';
+
+    Route::get('/{slug}', 'PagesController@pages')->name('page');
 
 //    Route::get('faq', 'MainController@faq')->name('faq');
 });

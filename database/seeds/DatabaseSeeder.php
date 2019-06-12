@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         factory(\App\Models\ArticleCategory::class, 10)->create();
         factory(\App\Models\Article::class, 30)->create();
         factory(\App\Models\Page::class, 5)->create();
+        factory(\App\Models\Application::class, 8)->create();
+        factory(\App\Models\Slider::class, 3)->create();
 
 
         /****** SEED CATEGORIES TABLE FOR PARENT_ID ******/

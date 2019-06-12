@@ -7,6 +7,8 @@
         <li><a href="{{ backpack_url('articlecategory') }}"><i class="fa fa-list"></i>Categories</a></li>
     </ul>
 </li>
+<li><a href="{{ backpack_url('application') }}"><i class="fa fa-file-archive-o"></i> <span> Application </span></a></li>
+<li><a href="{{ backpack_url('slider') }}"><i class="fa fa-slideshare"></i> <span> Slider </span></a></li>
 <li><a href="{{ backpack_url('faq') }}"><i class="fa fa-question"></i> <span> FAQ </span></a></li>
 <li><a href="{{ backpack_url('partner') }}"><i class="fa fa-users"></i> <span> Our Partners </span></a></li>
 <li><a href="{{ backpack_url('feedback') }}"><i class="fa fa-star-half-o"></i> <span> Feedbacks </span></a></li>

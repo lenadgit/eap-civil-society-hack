@@ -19,5 +19,7 @@ Route::group([
     CRUD::resource('page', 'PageCrudController');
     CRUD::resource('partner', 'PartnerCrudController');
     CRUD::resource('admin', 'UserCrudController');
+    CRUD::resource('application', 'ApplicationCrudController');
+    CRUD::resource('slider', 'SliderCrudController');
 
 });

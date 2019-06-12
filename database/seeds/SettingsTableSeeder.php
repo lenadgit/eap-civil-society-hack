@@ -21,7 +21,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'telegram',
             'name'        => 'Telegram',
             'description' => 'Telegram',
-            'value'       => 'https://twitter.comwdflwfmwekmfw',
+            'value'       => 'https://telegram.com',
             'field'       => '{"name":"value","label":"Telegram","type":"text"}',
             'active'      => 1,
 
@@ -30,7 +30,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'twitter',
             'name'        => 'Twitter',
             'description' => 'Twitter',
-            'value'       => 'https://twitter.comwdflwfmwekmfw',
+            'value'       => 'https://twitter.com',
             'field'       => '{"name":"value","label":"Twitter","type":"text"}',
             'active'      => 1,
 
@@ -39,7 +39,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'facebook',
             'name'        => 'Facebook',
             'description' => 'Facebook',
-            'value'       => 'https://twitter.comwdflwfmwekmfw',
+            'value'       => 'https://facebook.com',
             'field'       => '{"name":"value","label":"Facebook","type":"text"}',
             'active'      => 1,
 
@@ -48,7 +48,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'instagram',
             'name'        => 'Instagram',
             'description' => 'Instagram',
-            'value'       => 'https://twitter.comwdflwfmwekmfw',
+            'value'       => 'https://instagram.com',
             'field'       => '{"name":"value","label":"Instagram","type":"text"}',
             'active'      => 1,
 
@@ -57,7 +57,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'youtube',
             'name'        => 'Youtube',
             'description' => 'Youtube',
-            'value'       => 'https://twitter.comwdflwfmwekmfw',
+            'value'       => 'https://youtube.com',
             'field'       => '{"name":"value","label":"Youtube","type":"text"}',
             'active'      => 1,
 
@@ -75,7 +75,7 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'email2',
             'name'        => 'Email 2',
             'description' => 'Email 2',
-            'value'       => 'info@test.com',
+            'value'       => 'info2@test.com',
             'field'       => '{"name":"value","label":"Email 2","type":"email"}',
             'active'      => 1,
 
@@ -93,8 +93,27 @@ class SettingsTableSeeder extends Seeder
             'key'         => 'phone2',
             'name'        => 'Phone 2',
             'description' => 'Phone 2',
-            'value'       => '+994555555555',
+            'value'       => '+994505000005',
             'field'       => '{"name":"value","label":"Phone 2","type":"text"}',
+            'active'      => 1,
+
+        ],
+        [
+            'key'         => 'address',
+            'name'        => 'Address',
+            'description' => 'Address',
+            'value'       => 'Bakı şəhəri, Zərifə Əliyeva küçəsi 77',
+            'field'       => '{"name":"value","label":"Address","type":"text"}',
+            'active'      => 1,
+
+        ],
+
+        [
+            'key'         => 'address2',
+            'name'        => 'Address 2',
+            'description' => 'Address 2',
+            'value'       => 'Bakı şəhəri, Zərifə Əliyeva küçəsi 77',
+            'field'       => '{"name":"value","label":"Address 2","type":"text"}',
             'active'      => 1,
 
         ],
