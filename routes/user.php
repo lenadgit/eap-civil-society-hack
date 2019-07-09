@@ -1,8 +1,8 @@
 <?php
-//
-//Route::group([
-//    'prefix'    => LaravelLocalization::setLocale(),
-//    'namespace' => 'Front',
-//], function () {
-//    Route::get('/', 'PagesController@index');
-//});
+
+Route::group([
+    'middleware' => ['auth', 'verified'],
+    'prefix'    => 'user',
+], function () {
+    Route::get('/', 'UserController@index');
+});

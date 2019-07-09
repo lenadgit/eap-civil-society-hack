@@ -13,7 +13,16 @@ use Backpack\Settings\app\Models\Setting;
 class PagesController extends Controller
 {
     public function index() {
-        return 'salam';
+//        return 'salam';
+        return view('pages.index');
+    }
+
+    public function about() {
+        return view('pages.about');
+    }
+
+    public function contact() {
+        return view('pages.contact');
     }
 
     public function pages($slug)

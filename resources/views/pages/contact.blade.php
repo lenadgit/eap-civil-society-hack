@@ -2,9 +2,7 @@
 
 {{--@section('content')--}}
 
-    {{--@include('sections.homepage.banner')--}}
-    {{----}}
 
 {{--@endsection--}}
 
-<h1>HEY</h1>
+<h1> about </h1>

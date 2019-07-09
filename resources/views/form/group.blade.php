@@ -1,15 +1,22 @@
 {{--USAGE--}}
 {{--@include('form.group', ['type' => 'select', 'key' => 'country_id', 'label' => 'salam', 'selects' => $countries, 'options' => ['class' => 'form-control', 'required']])--}}
+{{--@include('form.group', ['key' => 'name', 'label' => 'Name', 'options' => ['value' => old('name') ?: $user->name]])--}}
 
 <?php
 $type = (isset($type) ? $type : 'text');
 switch ($type)
 {
     case 'text':
-        $field = Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, $options);
+        $field = Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key], $options));
+        break;
+    case 'email':
+        $field = Form::email($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key], $options));
+        break;
+    case 'phone':
+        $field = Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key, "data-inputmask" => "'mask': '999-999-99-99'", "placeholder" => "050-500-00-00"], $options));
         break;
     case 'textarea':
-        $field = Form::textarea($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, $options);
+        $field = Form::textarea($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key], $options));
         break;
     case 'password':
         $field = Form::password($key, $options);
@@ -69,11 +76,14 @@ switch ($type)
                           <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
                         </div>';
         break;
+    case 'date':
+        $field = Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : \Request::has($key) ? \Request::get($key) : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key, "data-inputmask" => "'mask': '99/99/9999'", "placeholder" => \Carbon\Carbon::now()->format('d/m/Y')], $options));
+        break;
 
     case 'numeric':
         $field = '
                 <button data-type="-" class="btn btn-round btn-warning btn-sm"><i class="fa fa-minus"></i></button>';
-        $field .= Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, $options);
+        $field .= Form::text($key, ! array_key_exists('notOld', $options) ? (old($key) ? : (isset($item->{$key}) ? $item->{$key} : (array_key_exists('value', $options) ? $options['value'] : null))) : null, array_merge(["id" => $key], $options));
         $field .= '
                 <button data-type="+" class="btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i></button>
                 <a style="position: relative;left: 10px;top: 5px;" data-toggle="tooltip" data-placement="top" title="' . $label . '">
@@ -95,3 +105,17 @@ switch ($type)
         </span>
     @endif
 </div>
+
+
+
+@push('footer-scripts')
+    <script src="{{ asset('libraries/mask/jquery.inputmask.js') }}"></script>
+    <script src="{{ asset('libraries/mask/bindings/inputmask.binding.js') }}"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("[data-inputmask]").inputmask();
+        });
+    </script>
+@endpush
