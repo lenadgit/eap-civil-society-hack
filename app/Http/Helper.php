@@ -25,15 +25,21 @@ if (!function_exists('getCurrentUrl')) {
      */
     function getCurrentUrl($url, $argument = false, $value = false)
     {
-        if ($argument and \Route::current()->action['as'] == $url) {
+        if (is_array($url)) {
+            $ifMatched = in_array(\Route::current()->action['as'], $url);
+        } else {
+            $ifMatched = \Route::current()->action['as'] == $url;
+        }
+
+        if ($argument and $ifMatched) {
             if ($argument == 'class') {
-                echo 'class=' . $value;
+                echo 'class="' . $value . '"';
             } else {
                 echo 'style="' . $argument . ':' . $value . '"';
             }
-        } else {
-            return \Route::current()->action['as'] == $url;
         }
+
+        return $ifMatched;
     }
 
 }
