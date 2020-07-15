@@ -19,10 +19,10 @@ return [
     'logo_mini' => '<b>B</b>p',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Javid Abbasov',
+    'developer_name' => 'Vagif Aghayev',
 
     // Developer website. Link in footer.
-    'developer_link' => 'https://abbasov-javid.com',
+    'developer_link' => 'https://www.linkedin.com/in/vagif-aghayev-270298/',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => false,

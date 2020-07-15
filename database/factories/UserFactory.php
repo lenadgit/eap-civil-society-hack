@@ -26,8 +26,8 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
 
 $factory->define(App\Models\Admin::class, function (Faker $faker) {
     return [
-        'name' => 'Javid Abbasov',
-        'email' => 'lut_milcey@mail.ru',
+        'name' => 'Vagif Aghayev',
+        'email' => 'musepsycho98@gmail.com',
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => Str::random(10),
     ];
