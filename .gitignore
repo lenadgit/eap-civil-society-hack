@@ -133,4 +133,4 @@ fabric.properties
 ### Vagrant Patch ###
 *.box
 
-# End of https://www.gitignore.io/api/git,vagrant,laravel,composer,phpstorm
+# End of https://www.gitignore.io/api/git,vagrant,laravel,composer,phpstorm.idea
