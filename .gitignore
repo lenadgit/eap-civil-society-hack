@@ -134,3 +134,4 @@ fabric.properties
 *.box
 
 # End of https://www.gitignore.io/api/git,vagrant,laravel,composer,phpstorm.idea
+.idea
