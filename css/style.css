@@ -86,6 +86,10 @@ table {
   background-size: 110%;
   position: relative;
 }
+
+.pb-3 {
+	padding-bottom: 30px;
+}
 .main-wr-menu {
 	padding-top: 30px;
 }
@@ -429,6 +433,10 @@ width: 270px;
 	margin-top: -20px;
 }
 
+.mt-3 {
+	margin-top: 30px;
+}
+
 /*  BX-Slider  */
 .bx-wrapper .bx-pager, .bx-wrapper {
     display: block !important;
@@ -599,6 +607,68 @@ float: right;
 	width: 300px;
 	margin-top: 25px;
 }
+
+.form-wrapper {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.form-heading {
+	font: 24px Raleway-SemiBold, sans-serif;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.form-1 {
+	text-align: center;
+}
+
+.form-submit {
+	text-transform: uppercase;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	 behavior: url(PIE.htc);
+	border: none;
+	color: #ffffff;
+	font: 22px Open-Sans, sans-serif;
+	background: #1ab798;
+	padding: 10px 20px;
+	margin-top: 0px;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+
+.form-submit:hover {
+	background: #1ab750;
+}
+
+.form-1 > input {
+	width: 300px;
+	height: 35px;
+	padding: 5px;
+    margin: 0 auto 20px;
+    border: 3px solid #ebe6e2;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    text-shadow: 0 1px rgba(255,255,255,0.3);
+    outline: none;
+    display: block;
+}
+
+.form-1 > input:focus {
+	border-color: #BBB;
+}
+
+.hr {
+	width: 40%;
+	height: 2px;
+	margin: 30px auto;
+	background: #cccccc;
+}
+
+
 
 /*  MEDIA  */
 
