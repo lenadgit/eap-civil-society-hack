@@ -25,6 +25,10 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
+    public function map() {
+        return view('pages.map');
+    }
+
     public function pages($slug)
     {
         $page = Page::FindBySlug($slug)->first();
@@ -102,6 +106,4 @@ class PagesController extends Controller
             'text' => __('front.success'),
         ]);
     }
-
-
 }

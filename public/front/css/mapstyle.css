@@ -1,0 +1,25 @@
+#map {
+    height: 480px;
+}
+
+.logo {
+    width: 75%;
+}
+
+@media screen and (max-width: 640px) {
+    .logo {
+        width: 25%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .navbar-toggle {
+        background-color: #ccc !important;
+    }
+}
