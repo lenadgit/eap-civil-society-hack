@@ -14,12 +14,12 @@
 
                     <li class="menu-item">
                         <span class="auth">
-                            <a href="">Войти</a>&nbsp;
+                            <a href="{{ route('login') }}">Войти</a>&nbsp;
                         </span>
                     </li>
                     <li class="menu-item">
                         <span class="auth">
-                            <a href="">Регистрация</a>&nbsp;
+                            <a href="{{ route('register') }}">Регистрация</a>&nbsp;
                         </span>
                     </li>
                 </ul>
