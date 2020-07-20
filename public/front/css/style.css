@@ -127,7 +127,7 @@ table {
 .menu-item {
     display: inline-block;
     font: 13px Open-Sans, sans-serif;
-    padding: 10px 30px 0 0;
+    padding: 1px 30px 0 0;
 }
 
 .menu-item a {

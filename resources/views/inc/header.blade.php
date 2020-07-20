@@ -1,4 +1,4 @@
-<header class="header" >
+<header class="header">
     <div class="main-wr-menu pb-3">
         <div class="wrapper-menu">
             <div class="logo">Logo</div>

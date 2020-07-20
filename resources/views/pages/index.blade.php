@@ -108,7 +108,7 @@
         </div>
 
         <div class="button-alignment">
-            <a href="map.html">
+            <a href="{{ route("map") }}">
                 <button class="btnheader-download">Присоединиться к команде</button>
             </a>
         </div>
