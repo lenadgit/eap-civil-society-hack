@@ -13,7 +13,7 @@ Route::namespace('Front')->group(function () {
 Auth::routes();
 
 Route::get('logout', [
-    'as'   => 'logout',
+    'as' => 'logout',
     'uses' => 'Auth\LoginController@logout',
 ]);
 
