@@ -20,30 +20,45 @@
     <![endif]-->
   </head>
   <body>
-    <header class = "header">
-      <div class = "main-wr-menu">
-        <div class = "wrapper-menu">
-          <div class = "logo">Logo</div>
-          <div class = "menubutton"></div>
-          <nav class = "menu">
-            <ul>
-              <li class = "menu-item"><a href = "">Главная</a></li>
-              <li class = "menu-item"><a href = "">Карты</a></li>
-              <li class = "menu-item"><a href = "">Список жалоб</a></li>
-              <li class = "menu-item"><a href = "">О пректе</a></li>
-              <li class = "menu-item"><a href = "">Контакты</a></li>
-              <li class = "menu-item"><span class = "auth"><a href = "">Войти</a>&nbsp;<a href = "">Регистрация</a></span></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+          <header class = "header">
+            <div class = "main-wr-menu pb-3">
+              <div class = "wrapper-menu">
+                <div class = "logo">Logo</div>
+                <div class = "menubutton"></div>
+                <nav class = "menu">
+                  <ul>
+                    <li class = "menu-item"><a href = "">Главная</a></li>
+                    <li class = "menu-item"><a href = "">Карты</a></li>
+                    <li class = "menu-item"><a href = "">Список жалоб</a></li>
+                    <li class = "menu-item"><a href = "">О пректе</a></li>
+                    <li class = "menu-item"><a href = "">Контакты</a></li>
+                    <li class = "menu-item"><span class = "auth"><a href = "auth.html">Войти</a>&nbsp;<a href = "">Регистрация</a></span></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
     <div class = "map-block ">
       <div id = "map"></div>
     </div>
     <div class = "fourth-block">
       <h2 class = "heading-2">Обращения, вопросы к местным властям</h2>
+
       <div class = "discussions">
+              <div class = "filter-wrapper">
+        <select>
+          <option>Жалобы на ремонт дороги</option>
+          <option>Жалобы на ремонт учебных заведений</option>
+          <option>Жалобы на ремонт культурных учреждений</option>
+          <option>Жалобы на ремонт исторических наследий</option>
+        </select>
+        <select>
+          <option>Участок 1</option>
+          <option>Участок 2</option>
+          <option>Участок 3</option>
+        </select>
+        <button class = "filter-button">Отфильтровать</button>
+      </div>
         <div class = "discuss">
           <h3>Жалоба 1</h3>
           <p>Текст жалобы 1</p>

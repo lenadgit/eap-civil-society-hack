@@ -594,19 +594,63 @@ float: right;
 }
 
 .map-block {
-	background-color: #17d0ac;
-	padding-top: 20px;
+
+}
+
+.filter-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+} 
+
+.filter-wrapper > select {
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	width: 280px;
+	outline: none;
+}
+
+.filter-button {
+	background: #1ab798;;
+	color: #ffffff;
+	font-weight: 600;
+	font: 20px 'Calibri', sans-serif;
+	padding: 10px 20px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border: none;
+}
+
+.filter-wrapper > select > option {
+	background: #E5E5E5;
 }
 
 .discussions {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	padding: 2% 5%;
 }
 
 .discuss {
-	width: 300px;
 	margin-top: 25px;
+	border: 1px solid #E5E5E5;
+	padding: 10px;
+}
+
+.discuss > h3 {
+	font: 24px 'Calibri', sans-serif;
+	font-weight: 550;
+	margin-bottom: 15px;
+}
+
+.author {
+	font: 18px 'Calibri', sans-serif;
+	color: #8a959e;
+	line-height: 2;
 }
 
 .form-wrapper {
