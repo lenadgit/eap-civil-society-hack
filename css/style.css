@@ -196,7 +196,7 @@ table {
 
 .first-block-wrapper {
 	width: 80%;
-	margin: 5% auto;
+	margin: 2% auto;
 }
 
 .first-block-text {
@@ -269,8 +269,9 @@ table {
 }
 
 .second-icons {
-	display: inline-block;
-	margin-top: 4%;
+    display: block;
+    margin: 2% auto;
+    width: 20%;
 }
 
 .second-icon {
