@@ -90,7 +90,7 @@ table {
 .header {
     width: 100%;
     background-image: url("../images/fon-seryy.jpg");
-    background-size: 110%;
+    background-size: 500%;
     position: relative;
 }
 
@@ -216,7 +216,7 @@ table {
 
 .first-block-wrapper {
     width: 80%;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .first-block-text {
@@ -291,8 +291,14 @@ table {
 }
 
 .second-icons {
-    display: inline-block;
-    margin-top: 4%;
+    display: block;
+    margin: 2% auto;
+    width: 20%;
+}
+
+.button-alignment {
+    display: flex;
+    justify-content: center;
 }
 
 .second-icon {
@@ -487,6 +493,7 @@ table {
     width: 100%;
     background-image: url("../images/footer-bg.jpg");
     background-size: cover;
+    margin-bottom: -5%;
 }
 
 .contact-us {
