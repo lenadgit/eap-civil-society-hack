@@ -7,11 +7,15 @@ Route::namespace('Front')->group(function () {
     Route::get('map', 'PagesController@map')->name('map');
     Route::post('sendmail', 'PagesController@sendmail')->name('sendmail');
 
-    require_once 'user.php';
 
-    Route::get('/{slug}', 'PagesController@pages')->name('page');
 });
 
-
 Auth::routes();
+
+Route::get('logout', [
+    'as'   => 'logout',
+    'uses' => 'Auth\LoginController@logout',
+]);
+
+Route::get('/{slug}', 'App\Http\Controllers\Front\PagesController@pages')->name('page');
 

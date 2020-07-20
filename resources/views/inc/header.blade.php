@@ -8,20 +8,28 @@
                     <li class="menu-item"><a href="{{ route('home') }}">Главная</a></li>
                     <li class="menu-item"><a href="{{ route('map') }}">Карты</a></li>
                     <li class="menu-item"><a href="">Список жалоб</a></li>
-                    <li class="menu-item"><a href="">О пректе</a></li>
+                    <li class="menu-item"><a href="">О проекте</a></li>
                     <li class="menu-item"><a href="">Контакты</a></li>
 
-
-                    <li class="menu-item">
+                    @if (! Auth::check())
+                        <li class="menu-item">
                         <span class="auth">
                             <a href="{{ route('login') }}">Войти</a>&nbsp;
                         </span>
-                    </li>
-                    <li class="menu-item">
+                        </li>
+                        <li class="menu-item">
                         <span class="auth">
                             <a href="{{ route('register') }}">Регистрация</a>&nbsp;
                         </span>
-                    </li>
+                        </li>
+                    @else
+                        <li class="menu-item">
+                        <span class="auth">
+                            <a href="{{ route('logout') }}">Выйти</a>&nbsp;
+                        </span>
+                        </li>
+                    @endif
+
                 </ul>
             </nav>
         </div>
