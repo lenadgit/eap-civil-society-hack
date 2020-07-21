@@ -1,13 +1,12 @@
 #map {
-    height: 480px;
+    height: 650px;
 }
 
-.logo {
-    width: 75%;
-}
+
 
 @media screen and (max-width: 640px) {
     .logo {
+
         width: 25%;
     }
 

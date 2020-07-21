@@ -12,21 +12,36 @@ use Backpack\Settings\app\Models\Setting;
 
 class PagesController extends Controller
 {
-    public function index() {
+    public function index()
+    {
 //        return 'salam';
         return view('pages.index');
     }
 
-    public function about() {
+    public function new_complain()
+    {
+//        return 'salam';
+        return view('pages.create_complain_form');
+    }
+
+    public function about()
+    {
         return view('pages.about');
     }
 
-    public function contact() {
+    public function contact()
+    {
         return view('pages.contact');
     }
 
-    public function map() {
+    public function map()
+    {
         return view('pages.map');
+    }
+
+    public function complain()
+    {
+        return view('pages.complain');
     }
 
     public function pages($slug)
@@ -77,7 +92,8 @@ class PagesController extends Controller
         ]);
     }
 
-    public function sendmail(Request $request) {
+    public function sendmail(Request $request)
+    {
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:3',
@@ -96,7 +112,7 @@ class PagesController extends Controller
             'email' => $request->email,
             'bdmessage' => $request->message
         );
-        Mail::send('pages.mail', $data, function($message) use ($data){
+        Mail::send('pages.mail', $data, function ($message) use ($data) {
             $message->from($data['email']);
             $message->to(Setting::get('email'));
             $message->subject($data['subject']);

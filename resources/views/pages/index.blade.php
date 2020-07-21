@@ -1,293 +1,315 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <div class="wrapper-header" >
-        <div class="header-content">
-            <h1 class="lead-text">Все ремонтные работы на карте города</h1>
-            <p>Отслеживайте финансирование ремонтных работ с возможностью связаться с ответственными людьми
-                напрямую!</p>
-            <ul>
-                <li>> объекты по которым проводяться ремонтные работы</li>
-                <li>> возможность просмотра фигнансирования и ответсвенных лиц</li>
-                <li>> возможность обсуждать пользователями качество по ходу выполнения работ</li>
-                <li>> возможность добавлять на карту объекты требующие ремонта</li>
-            </ul>
-
-            <a href="{{ route('map') }}">
-                <button class="btnheader-download">Перейти на карту</button>
-            </a>
-
-        </div>
-        <div class="header-picture">
-            <img alt="" src="{{ asset('front/images/master-rem.png') }}">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="first-block">
-        <h2 class="heading-2">Мы в СМИ</h2>
-        <div class="headingpic"><img alt="" src="{{ asset("front/images/headingpic.png") }}"></div>
-        <div class="first-block-wrapper">
-            <p class="first-block-text">
-                Следите за нами в новостях
-            </p>
-            <div class="first-inner-wrapper">
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-            </div>
-            <div class="first-inner-wrapper phone-picture">
-                <img src="{{ asset("front/images/phone.png") }}" alt="phone" class="main-phone-pic">
-            </div>
-            <div class="first-inner-wrapper">
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-                <article class="art">
-                    <h3 class="first-heading-3">Amet Varius</h3>
-                    <p class="float-image">Donec posuere augue venenatis, aliquet ligula ut, tempus quam. Vivamus diam a
-                        iaculis malesuada</p>
-                </article>
-            </div>
-        </div>
-    </div>
-
-    <div class="second-block">
-        <div class="second-block-wrapper">
-            <div class="second-inner">
-                <h3 class="second-heading-3">Как это работает</h3>
-                <p class="second-text">Вы заходите на сайт, на глвной странице переходите по ссылке "Перейти на карту".
-                    На странице карты вибираете город из списка, информация о котором вас интересует. Карту можно
-                    увеличивать и уменьшать. На карте города появляются иконки-метки, по которым можно кликнуть. Каждая
-                    метка - это объект на который были выделены деньги на его ремонт. Если кликнуть на метку -
-                    появляеться окошко с информацией: сколько денег было выделено и когда, а также вид ремонтных работ.
-                    Кроме того там указаны данные чиновника, который несет ответственность за этот объект: его ФИО и
-                    контактные данные: номер телефона администрации и эмейл. Благодаря этой информации можно следить за
-                    выполнением ремонтных работ и при необходимости или некачесвенном выполнени можно сразу же
-                    контактировать с ответственными людьми. Демонстрацию фунционала сайта можно посмотреть в кратком
-                    видеообзоре.</p>
-            </div>
-            <div class="second-inner center">
-                <iframe src="https://player.vimeo.com/video/198442959" width="90%" height="300" frameborder="0"
-                        webkitallowfullscreen mozallowfullscreen allowfullscreen class="border-video"></iframe>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="third-block">
-        <h2 class="heading-2">Стать волонтером</h2>
-        <div class="headingpic"><img alt="" src="{{ asset('front/images/headingpic.png') }}"></div>
-        <div class="first-block-wrapper">
-            <p class="first-block-text">
-                Наша команда состоит из волонтерского сообщества - гражданских активистов, которым не безразлична судьба
-                страны и оно могут повлиять на события. Вы можете также стать волонтером: принимать участие в
-                отслеживании информации, которая поступает на сайт, корректировать ее, совместно вести соцсети, общаться
-                в сообществе.
-            </p>
-        </div>
-
-        <div class="button-alignment">
-            <a href="{{ route("map") }}">
-                <button class="btnheader-download">Присоединиться к команде</button>
-            </a>
-        </div>
-    </div>
-
-    <div class = "fourth-block">
-        <h2 class = "heading-2">Мы в соцсетях </h2>
-        <div class="headingpic"><img alt="" src = "{{ asset("front/images/headingpic.png") }}"></div>
-        <div class = "first-block-wrapper">
-            <p class = "first-block-text">
-                Мы активно обсуждаем жизнь города, где каждый подписчик может выразить свое мнение, а мы можем его поддержать.
-            </p>
-            <div class = "second-icons">
-                <div class = "second-icon"><a href = "" ><img src = "{{ asset("front/images/icon-ios.png") }}" alt = "icon ios" class = "second-icon-pic"></a></div>
-                <div class = "second-icon"><a href = "" ><img src = "{{ asset("front/images/icon-android.png") }}" alt = "icon ios" class = "second-icon-pic"></a></div>
-                <div class = "second-icon"><a href = "" ><img src = "{{ asset("front/images/icon-win.png") }}" alt = "icon ios" class = "second-icon-pic"></a></div>
-            </div>
-        </div>
-    </div>
-
-    <div class = "third-block">
-        <h2 class = "heading-2">Наши партнеры</h2>
-        <div class="headingpic"><img alt="" src = "{{ asset("front/images/headingpic.png") }}"></div>
-        <div class = "first-block-wrapper">
-            <p class = "first-block-text">
-                Проект разработан при поддержке Eastern Partnership Civil Society Facility
-            </p>
-        </div>
-        <center><div class = "team-wrapper">
-                <div class = "team-inner-wrapper">
-
-                    <div class = "team-member one">
-                        <div class = "team-text text-one"><h4 class = "heading-4">Eastern Partnership Civil Society Facility</h4>
-                            sit aspernatur aut odit aut fugit, sed quia conceuuntur magni dolores eos qui ratione voluptatem.
-                            <div class = "member-social">
-                                <a href = ""><img src = "{{ asset("front/images/soc-twitter.jpg") }}" alt = "icon"></a>
-                                <a href = ""><img src = "{{ asset("front/images/soc-facebook.jpg") }}" alt = "icon"></a>
-                                <a href = ""><img src = "{{ asset("front/images/soc-google.jpg") }}" alt = "icon"></a>
+    {{--    TOP OF INDEX--}}
+    <div class="slider-area ">
+        <div class="slider-active">
+            <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 col-md-9 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInUp" data-delay=".4s">App Landing Page</span>
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Get things done<br>with Appco</h1>
+                                <p data-animation="fadeInUp" data-delay=".8s">Dorem ipsum dolor sitamet, consectetur
+                                    adipiscing elit, sed do eiusm tempor incididunt ulabore et dolore magna aliqua.</p>
+                                <!-- Slider btn -->
+                                <div class="slider-btns">
+                                    <!-- Hero-btn -->
+                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html"
+                                       class="btn radius-btn">Download</a>
+                                    <!-- Video Btn -->
+                                    <a data-animation="fadeInRight" data-delay="1.0s"
+                                       class="popup-video video-btn ani-btn"
+                                       href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i
+                                            class="fas fa-play"></i></a>
+                                </div>
                             </div>
                         </div>
-                        <div class = "member-picture-1 picture-1"></div>
-                        <figcaption class = "member-name-1">Eastern Partnership Civil Society Facility</figcaption><br><span class = "team-figcaption">Short description here</span></div>
-                    <div class = "team-member two">
-                        <div class = "team-text text-two"><h4 class = "heading-4">Aenean ut suscipit urna. Donec efficitur</h4>
-                            sit aspernatur aut odit aut fugit, sed quia conceuuntur magni dolores eos qui ratione voluptatem.
-                            <div class = "member-social">
-                                <a href = ""><img src = "{{ asset("front/images/soc-twitter.jpg") }}" alt = "icon"></a>
-                                <a href = ""><img src = "{{ asset("front/images/soc-facebook.jpg") }}" alt = "icon"></a>
-                                <a href = ""><img src = "{{ asset("front/images/soc-google.jpg") }}" alt = "icon"></a>
+                        <div class="col-lg-6">
+                            <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight"
+                                 data-delay="1s">
+                                <img src="{{ asset('front/images/hero/hero_right.png') }}" alt="">
                             </div>
                         </div>
-                        <div class = "member-picture-2 picture-2"></div>
-                        <figcaption class = "member-name-2">European Union</figcaption><br><span class = "team-figcaption">short description</span></div>
-
+                    </div>
                 </div>
-                <div class = "team-inner-wrapper">
-                    <div class = "team-member three">
-                        <div class = "team-text text-three"><h4 class = "heading-4">Aenean ut suscipit urna. Donec efficitur</h4>
-                            sit aspernatur aut odit aut fugit, sed quia conceuuntur magni dolores eos qui ratione voluptatem.
-                            <div class = "member-social">
-                                <a href = ""><img src = "img/soc-twitter.jpg" alt = "icon"></a>
-                                <a href = ""><img src = "img/soc-facebook.jpg" alt = "icon"></a>
-                                <a href = ""><img src = "img/soc-google.jpg" alt = "icon"></a>
+            </div>
+            <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 col-md-9 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInUp" data-delay=".4s">App Landing Page</span>
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Get things done<br>with Appco</h1>
+                                <p data-animation="fadeInUp" data-delay=".8s">Dorem ipsum dolor sitamet, consectetur
+                                    adipiscing elit, sed do eiusm tempor incididunt ulabore et dolore magna aliqua.</p>
+                                <!-- Slider btn -->
+                                <div class="slider-btns">
+                                    <!-- Hero-btn -->
+                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html"
+                                       class="btn radius-btn">Download</a>
+                                    <!-- Video Btn -->
+                                    <a data-animation="fadeInRight" data-delay="1.0s"
+                                       class="popup-video video-btn ani-btn"
+                                       href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i
+                                            class="fas fa-play"></i></a>
+                                </div>
                             </div>
                         </div>
-
-                        <div class = "member-picture-3 picture-3"></div>
-                        <!--   <img src = "img/member-1.jpg" alt = "" class = "member-picture">  -->
-                        <figcaption class = "member-name-3">GDSI</figcaption><br><span class = "team-figcaption">Short descr</span></div>
-                    <div class = "team-member four">
-                        <div class = "team-text text-four"><h4 class = "heading-4">Aenean ut suscipit urna. Donec efficitur</h4>
-                            sit aspernatur aut odit aut fugit, sed quia conceuuntur magni dolores eos qui ratione voluptatem.
-                            <div class = "member-social">
-                                <a href = ""><img src = "img/soc-twitter.jpg" alt = "icon"></a>
-                                <a href = ""><img src = "img/soc-facebook.jpg" alt = "icon"></a>
-                                <a href = ""><img src = "img/soc-google.jpg" alt = "icon"></a>
+                        <div class="col-lg-6">
+                            <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight"
+                                 data-delay="1s">
+                                <img src="{{ asset('front/img/hero/hero_right.png') }}" alt="">
                             </div>
                         </div>
-                        <div class = "member-picture-4 picture-4"></div>
-                        <figcaption class = "member-name-4">YouVote</figcaption><br><span class = "team-figcaption">Short descript</span></div>
-
+                    </div>
                 </div>
-            </div></center>
+            </div>
+        </div>
     </div>
-
-
-    <div class="contact-index">
-        <h2 class="footer-heading">Связь с нами</h2>
-        <div class="headingpic"><img alt="" src="{{ asset("front/images/footerheading.png") }}"></div>
-        <div class="footer-wrapper">
-            <div class="footer-inner">
-                <h3 class="heading-3">Связь с нами</h3>
-                <p class="footer-text">Nunc urna est, tristique et varius at, pharetra nec enim. Quisque rhoncus lacus
-                    fringilla nulla sollicitudin tristique.</p>
-                <div class="footer-social">
-                    <a href=""><img src="{{ asset("front/images/footer-facebook.png") }}" alt="icon"></a>
-                    <a href=""><img src="{{ asset("front/images/footer-twitter.png") }}" alt="icon"></a>
-                    <a href=""><img src="{{ asset("front/images/footer-google.png") }}" alt="icon"></a>
+    {{--    HOW IT WORKS--}}
+    <section class="best-features-area section-padd4">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-8 col-lg-10">
+                    <!-- Section Tittle -->
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                            <div class="section-tittle">
+                                <h2>Some of the best features Of Our App!</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section caption -->
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="single-features mb-70">
+                                <div class="features-icon">
+                                    <span class="flaticon-support"></span>
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Easy to Costomize</h3>
+                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="single-features mb-70">
+                                <div class="features-icon">
+                                    <span class="flaticon-support"></span>
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Extreme Security</h3>
+                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="single-features mb-70">
+                                <div class="features-icon">
+                                    <span class="flaticon-support"></span>
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Customer Support</h3>
+                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="single-features mb-70">
+                                <div class="features-icon">
+                                    <span class="flaticon-support"></span>
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Creative Design</h3>
+                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="footer-text ">
-                    <a href="tel: +XX-XXXX-XXX" class="footer-link">XX-XXXX-XXX</a><br>
-                    <a href="mailto: businessname@gmail.com" class="footer-link">Businessname@gmail.com</a>
-                </p>
             </div>
-            <div class="footer-inner">
-                <form name="contact-form">
-                    <input type="text" class="form-input input-left" placeholder="Name" required>
-                    <input type="email" class="form-input input-right" placeholder="E-Mail" required>
-                    <div class="clearfix"></div>
-                    <textarea class="footer-textarea" rows="10">Message</textarea>
-                    <input type="submit" value="Submit" class="submit">
-                    <div class="clearfix"></div>
-                </form>
+        </div>
+        <!-- Shpe -->
+        <div class="features-shpae d-none d-lg-block">
+            <img src="{{ asset('front/images/shape/best-features.png') }}" alt="">
+        </div>
+    </section>
+    {{--    НАШИ ПАРТНЕРЫ--}}
+    <section class="service-area sky-blue section-padding2">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-tittle text-center">
+                        <h2>How Can We HelpYour<br>with Appco!</h2>
+                    </div>
+                </div>
             </div>
+            <!-- Section caption -->
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-caption text-center mb-30">
+                        <div class="service-icon">
+                            <span class="flaticon-businessman"></span>
+                        </div>
+                        <div class="service-cap">
+                            <h4><a href="#">Easily Manage</a></h4>
+                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
+                                laborea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-caption active text-center mb-30">
+                        <div class="service-icon">
+                            <span class="flaticon-pay"></span>
+                        </div>
+                        <div class="service-cap">
+                            <h4><a href="#">Get Payments Easily</a></h4>
+                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
+                                laborea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-caption text-center mb-30">
+                        <div class="service-icon">
+                            <span class="flaticon-plane"></span>
+                        </div>
+                        <div class="service-cap">
+                            <h4><a href="#">Quick Messaging</a></h4>
+                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
+                                laborea.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{--    ОТЗЫВЫ--}}
+    <div class="our-customer section-padd-top30">
+        <div class="container-fluid">
+            <div class="our-customer-wrapper">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-tittle text-center">
+                            <h2>What Our Customers<br> Have to Say</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="customar-active dot-style d-flex dot-style">
+                            <div class="single-customer mb-100">
+                                <div class="what-img">
+                                    <img src="{{ asset('front/images/shape/man1.png') }}" alt="">
+                                </div>
+                                <div class="what-cap">
+                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
+                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
+                                        commodo consequat duis aute irure dolor in represse.</p>
+                                </div>
+                            </div>
+
+                            <div class="single-customer mb-100">
+                                <div class="what-img">
+                                    <img src="{{ asset('front/images/shape/man2.png') }}" alt="">
+                                </div>
+                                <div class="what-cap">
+                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
+                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
+                                        commodo consequat duis aute irure dolor in represse.</p>
+                                </div>
+                            </div>
+
+                            <div class="single-customer mb-100">
+                                <div class="what-img">
+                                    <img src="{{ asset('front/images/shape/man3.png') }}" alt="">
+                                </div>
+                                <div class="what-cap">
+                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
+                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
+                                        commodo consequat duis aute irure dolor in represse.</p>
+                                </div>
+                            </div>
+
+                            <div class="single-customer mb-100">
+                                <div class="what-img">
+                                    <img src="{{ asset('front/images/shape/man2.png') }}" alt="">
+                                </div>
+                                <div class="what-cap">
+                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
+                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
+                                        commodo consequat duis aute irure dolor in represse.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--    ПЛЕЙСТОР--}}
+    <div class="available-app-area">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="app-caption">
+                        <div class="section-tittle section-tittle3">
+                            <h2>Our App Available For Any Device Download now</h2>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fug.</p>
+                            <div class="app-btn">
+                                <a href="#" class="app-btn1"><img src="{{ asset('front/images/shape/app_btn1.png') }}"
+                                                                  alt=""></a>
+                                <a href="#" class="app-btn2"><img src="{{ asset('front/images/shape/app_btn2.png') }}"
+                                                                  alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="app-img">
+                        <img src="{{ asset('front/images/shape/available-app.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shape -->
+        <div class="app-shape">
+            <img src="{{ asset('front/images/shape/app-shape-top.png') }}" alt=""
+                 class="app-shape-top heartbeat d-none d-lg-block">
+            <img src="{{ asset('front/images/shape/app-shape-left.png') }}" alt=""
+                 class="app-shape-left d-none d-xl-block">
+            <!-- <img src="assets/img/shape/app-shape-right.png" alt="" class="app-shape-right bounce-animate "> -->
+        </div>
+    </div>
+    {{--    CONTACT--}}
+    <div class="say-something-aera pt-90 pb-90 fix">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="offset-xl-1 offset-lg-1 col-xl-5 col-lg-5">
+                    <div class="say-something-cap">
+                        <h2>Say Hello To The Collaboration Hub.</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3">
+                    <div class="say-btn">
+                        <a href="#" class="btn radius-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shape -->
+        <div class="say-shape">
+            <img src="{{ asset('front/images/shape/say-shape-left.png') }}" alt="" class="say-shape1 rotateme d-none d-xl-block">
+            <img src="{{ asset('front/images/shape/say-shape-right.png') }}" alt="" class="say-shape2 d-none d-lg-block">
         </div>
     </div>
 @endsection
 
-@push('scripts')
-    <script>
-        $(".one").mouseover(function () {
-            $(".text-one").css('visibility', 'visible');
-            //$(".one").css({ 'opacity': 0.6, 'z-index': 2,});
-            $(".member-picture-1").css({'opacity': 0.5, 'z-index': 0, 'background': "#1ab798"});
-            $(".member-name-1").css('color', '#1ab798');
-        });
-        $(".one").mouseleave(function () {
-            $(".text-one").css('visibility', 'hidden');
-            //$(".one").css({ 'opacity': 1, 'z-index': 2,});
-            $(".member-picture-1").css({'opacity': 1, 'z-index': 2, 'background': "url('./img/member-1.jpg')"});
-            $(".member-name-1").css('color', '#000000');
-        });
 
-        $(".two").mouseover(function () {
-            $(".text-two").css('visibility', 'visible');
-            //$(".two").css({ 'opacity': 0.6, 'z-index': 2,});
-            $(".member-picture-2").css({'opacity': 0.5, 'z-index': 0, 'background': "#1ab798"});
-            $(".member-name-2").css('color', '#1ab798');
-        });
-        $(".two").mouseleave(function () {
-            $(".text-two").css('visibility', 'hidden');
-            //$(".two").css({ 'opacity': 1, 'z-index': 2,});
-            $(".member-picture-2").css({'opacity': 1, 'z-index': 2, 'background': "url('./img/member-2.jpg')"});
-            $(".member-name-2").css('color', '#000000');
-        });
-
-        $(".three").mouseover(function () {
-            $(".text-three").css('visibility', 'visible');
-            //$(".three").css({ 'opacity': 0.6, 'z-index': 2,});
-            $(".member-picture-3").css({'opacity': 0.5, 'z-index': 0, 'background': "#1ab798"});
-            $(".member-name-3").css('color', '#1ab798');
-        });
-        $(".three").mouseleave(function () {
-            $(".text-three").css('visibility', 'hidden');
-            //$(".three").css({ 'opacity': 1, 'z-index': 2,});
-            $(".member-picture-3").css({'opacity': 1, 'z-index': 2, 'background': "url('./img/member-3.jpg')"});
-            $(".member-name-3").css('color', '#000000');
-        });
-
-        $(".four").mouseover(function () {
-            $(".text-four").css('visibility', 'visible');
-            //$(".four").css({ 'opacity': 0.6, 'z-index': 2,});
-            $(".member-picture-4").css({'opacity': 0.5, 'z-index': 0, 'background': "#1ab798"});
-            $(".member-name-4").css('color', '#1ab798');
-        });
-        $(".four").mouseleave(function () {
-            $(".text-four").css('visibility', 'hidden');
-            //$(".four").css({ 'opacity': 1, 'z-index': 2,});
-            $(".member-picture-4").css({'opacity': 1, 'z-index': 2, 'background': "url('./img/member-4.jpg')"});
-            $(".member-name-4").css('color', '#000000');
-        });
-    </script>
-    <script>
-        $('#slider1').bxSlider({
-            mode: 'fade',
-            auto: true,
-            autoControls: true,
-            pause: 2000
-        });
-    </script>
-@endpush
 

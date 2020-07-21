@@ -12,4 +12,9 @@ class Admin extends Model
     protected $table = 'admins';
 
     protected $fillable = ['name', 'email', 'password'];
+
+    public function complains()
+    {
+        return $this->hasMany(Complain::class);
+    }
 }

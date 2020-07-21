@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="fourth-block">
-        <h2 class="heading-2">Регистрация</h2>
-        <div class="form-wrapper">
+    <div class="section-top-border container" style="margin-top: 15%; margin-left: 24%">
+        <div class="row">
+            <h2>РЕГИСТРАЦИЯ</h2>
+
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
@@ -71,6 +72,5 @@
                     </div>
                 </div>
             </form>
-        </div>
-    </div>
+        </div></div>
 @endsection
