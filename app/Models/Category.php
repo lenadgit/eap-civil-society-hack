@@ -8,17 +8,12 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * Class Complain
- * @package App\Models
- */
-class Complain extends Model
+class Category extends Model
 {
     use Sluggable;
     use Slugit;
     use SoftDeletes;
     use CrudTrait;
-
 
     //
     /**
@@ -26,21 +21,23 @@ class Complain extends Model
      */
     protected $fillable =
         [
-            'complain_number',
-            'admin_id',
-            'user_id',
-            'description',
-            'attachment',
-            'type',
-            'admin_note',
-            'facility_id'
+            'name',
+            'slug',
+            'parent_id',
+            'icon',
+            'custom_id',
+            'parent_id'
         ];
 
+    /**
+     * @var string[]
+     */
+    protected $with = ['parent'];
     /*
-  |--------------------------------------------------------------------------
-  | GLOBAL VARIABLES
-  |--------------------------------------------------------------------------
-  */
+    |--------------------------------------------------------------------------
+    | GLOBAL VARIABLES
+    |--------------------------------------------------------------------------
+    */
 
     /*
     |--------------------------------------------------------------------------
@@ -54,25 +51,25 @@ class Complain extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function admin()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function complains()
     {
-        return $this->belongsTo(Admin::class);
+        return $this->hasMany(Complain::class);
     }
 
-    public function user()
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function parent()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Category::class, 'parent_id', 'id');
     }
 
-    public function facility()
-    {
-        return $this->belongsTo(Facility::class);
-    }
 
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
@@ -92,7 +89,6 @@ class Complain extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
-
     /**
      * @return \string[][]
      */
@@ -100,7 +96,7 @@ class Complain extends Model
     {
         return [
             'slug' => [
-                'source' => 'complain_number',
+                'source' => 'name',
             ],
         ];
     }
