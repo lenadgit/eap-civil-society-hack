@@ -22,14 +22,15 @@ class Facility extends Model
      */
     protected $fillable =
         [
-            'complain_number',
-            'admin_id',
-            'user_id',
+            'name',
+            'official_id',
+            'city_id',
+            'latitude',
+            'longitude',
+            'image',
             'description',
-            'attachment',
-            'type',
-            'admin_note',
-            'facility_id'
+            'slug',
+            'invested_sum'
         ];
 
     /*

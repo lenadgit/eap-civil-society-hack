@@ -22,14 +22,11 @@ class Official extends Model
      */
     protected $fillable =
         [
-            'complain_number',
-            'admin_id',
-            'user_id',
+            'name',
+            'email',
+            'phone',
             'description',
-            'attachment',
-            'type',
-            'admin_note',
-            'facility_id'
+            'position',
         ];
 
     /*
@@ -82,7 +79,7 @@ class Official extends Model
     {
         return [
             'slug' => [
-                'source' => 'complain_number',
+                'source' => 'name',
             ],
         ];
     }

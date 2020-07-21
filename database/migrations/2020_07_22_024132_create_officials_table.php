@@ -14,8 +14,14 @@ class CreateOfficialsTable extends Migration
     public function up()
     {
         Schema::create('officials', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->longText('name');
+            $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->longText('description')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -16,9 +16,9 @@ class CreateComplainsTable extends Migration
         Schema::create('complains', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('complain_number');
-            $table->unsignedInteger('admin_id')->nullable();
-            $table->unsignedInteger('user_id')->nullable();
-            $table->unsignedInteger('facility_id')->nullable();
+            $table->unsignedInteger('admin_id')->index()->nullable();
+            $table->unsignedInteger('user_id')->index()->nullable();
+            $table->unsignedInteger('facility_id')->index()->nullable();
             $table->longText('description')->nullable();
             $table->string('attachment')->nullable();
             $table->enum('type', ['PENDING', 'CONSIDERATION', 'REJECTED','SOLVED'])->default('PENDING');

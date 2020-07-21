@@ -14,8 +14,18 @@ class CreateFacilitiesTable extends Migration
     public function up()
     {
         Schema::create('facilities', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->longText('name');
+            $table->unsignedInteger('official_id')->index()->nullable();
+            $table->unsignedInteger('city_id')->index()->nullable();
+            $table->longText('latitude');
+            $table->longText('longitude');
+            $table->longText('image')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('slug')->nullable();
+            $table->string('invested_sum')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

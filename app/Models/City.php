@@ -22,14 +22,10 @@ class City extends Model
      */
     protected $fillable =
         [
-            'complain_number',
-            'admin_id',
-            'user_id',
-            'description',
-            'attachment',
-            'type',
-            'admin_note',
-            'facility_id'
+            'name',
+            'image',
+            'latitude',
+            'longitude',
         ];
 
     /*
@@ -82,7 +78,7 @@ class City extends Model
     {
         return [
             'slug' => [
-                'source' => 'complain_number',
+                'source' => 'name',
             ],
         ];
     }
