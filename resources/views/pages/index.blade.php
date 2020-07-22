@@ -10,8 +10,10 @@
                         <div class="col-lg-6 col-md-9 ">
                             <div class="hero__caption">
                                 <span data-animation="fadeInUp" data-delay=".4s">Веб сервис</span>
-                                <h1 data-animation="fadeInUp" data-delay=".6s">Все ремонтные работы и их финансирование<br>на карте города</h1>
-                                <p data-animation="fadeInUp" data-delay=".8s">Отслеживайте финансирование ремонтных работ с возможностью связаться с ответственными людьми напрямую!</p>
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Все ремонтные работы и их
+                                    финансирование<br>на карте города</h1>
+                                <p data-animation="fadeInUp" data-delay=".8s">Отслеживайте финансирование ремонтных
+                                    работ с возможностью связаться с ответственными людьми напрямую!</p>
                                 <!-- Slider btn -->
                                 <div class="slider-btns">
                                     <!-- Hero-btn -->
@@ -146,18 +148,20 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="services-caption text-center mb-30">
                         <div class="service-icon">
-                            <span class="flaticon-businessman"></span>
+                            <img style="max-width: 170px" src="{{ asset('front/images/partners/eap.jpeg') }}" alt="">
                         </div>
                         <div class="service-cap">
-                            <h4><a href="https://eapcivilsociety.eu/ru/">Eastern Partnership Civil Society Facility</a></h4>
-                            <p>Организатор хакатона и главный спонсор</p>
+                            <h4><a href="https://eapcivilsociety.eu/ru/">Eastern Partnership Civil Society Facility</a>
+                            </h4>
+                            <p>Организатор хакатона</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="services-caption active text-center mb-30">
                         <div class="service-icon">
-                            <span class="flaticon-pay"></span>
+                            <img style="max-width: 100px" src="{{ asset('front/images/partners/europeanunion.jpg') }}"
+                                 alt="">
                         </div>
                         <div class="service-cap">
                             <h4><a href="https://en.wikipedia.org/wiki/European_Union">European Union</a></h4>
@@ -165,10 +169,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="services-caption text-center mb-30">
+                <div class="col-xl-4 col-lg-4 col-md-6" >
+                    <div class="services-caption text-center mb-30" style="padding-bottom: 81px!important;">
                         <div class="service-icon">
-                            <span class="flaticon-plane"></span>
+                            <img style="max-width: 170px" src="{{ asset('front/images/partners/gdsi.png') }}" alt="">
                         </div>
                         <div class="service-cap">
                             <h4><a href="https://www.gdsi.ie/">GDSI</a></h4>
@@ -200,7 +204,8 @@
                                 </div>
                                 <div class="what-cap">
                                     <h4><a href="#">Чиновники ближе к народу!</a></h4>
-                                    <p>Оставил жалобу с помощью этого сайта, и через 5 дней получил детальный ответ о происходящем!</p>
+                                    <p>Оставил жалобу с помощью этого сайта, и через 5 дней получил детальный ответ о
+                                        происходящем!</p>
                                 </div>
                             </div>
 
@@ -220,7 +225,8 @@
                                 </div>
                                 <div class="what-cap">
                                     <h4><a href="#">Быстро реагируют</a></h4>
-                                    <p>Удивлена, как быстро отреагировали на мою жалобу. Раньше приходилось бы собираться под городским советом толпой народа.</p>
+                                    <p>Удивлена, как быстро отреагировали на мою жалобу. Раньше приходилось бы
+                                        собираться под городским советом толпой народа.</p>
                                 </div>
                             </div>
 
