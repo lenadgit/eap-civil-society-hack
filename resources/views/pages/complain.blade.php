@@ -22,55 +22,17 @@
                 <div class="col-lg-8 posts-list">
                     <div class="single-post">
                         <div class="feature-img">
-                            <img class="img-fluid" src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset($complain->attachment) }}" alt="">
                         </div>
                         <div class="blog_details">
-                            <h2>{!!  $complain->name !!}
+                            <h2>{!! $complain->name !!}
                             </h2>
                             <ul class="blog-info-link mt-3 mb-4">
-                                <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> {!! $complain->user->name !!}</a></li>
+                                <li><a href="#"><i class="fa fa-flag"></i> {!! $complain->facility->name !!}</a></li>
                             </ul>
                             <p class="excert">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you
-                                should have to spend money on boot camp when you can get the MCSE study materials
-                                yourself at a
-                                fraction of the camp price. However, who has the willpower
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you
-                                should have to spend money on boot camp when you can get the MCSE study materials
-                                yourself at a
-                                fraction of the camp price. However, who has the willpower to actually sit through a
-                                self-imposed MCSE training. who has the willpower to actually
-                            </p>
-                            <div class="quote-wrapper">
-                                <div class="quotes">
-                                    MCSE boot camps have its supporters and its detractors. Some people do not
-                                    understand why you
-                                    should have to spend money on boot camp when you can get the MCSE study materials
-                                    yourself at
-                                    a fraction of the camp price. However, who has the willpower to actually sit through
-                                    a
-                                    self-imposed MCSE training.
-                                </div>
-                            </div>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you
-                                should have to spend money on boot camp when you can get the MCSE study materials
-                                yourself at a
-                                fraction of the camp price. However, who has the willpower
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you
-                                should have to spend money on boot camp when you can get the MCSE study materials
-                                yourself at a
-                                fraction of the camp price. However, who has the willpower to actually sit through a
-                                self-imposed MCSE training. who has the willpower to actually
+                                {!! $complain->description !!}
                             </p>
                         </div>
                     </div>
@@ -89,33 +51,18 @@
                                 <li><a href="#"><i class="fab fa-behance"></i></a></li>
                             </ul>
                         </div>
-                        <div class="navigation-area">
-                            <div class="row">
-                                <div
-                                    class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/preview.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="arrow">
-                                        <a href="#">
-                                            <span class="lnr text-white ti-arrow-left"></span>
-                                        </a>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
                     </div>
                     <div class="blog-author">
                         <div class="media align-items-center">
                             <img src="assets/img/blog/author.png" alt="">
                             <div class="media-body">
-                                <a href="#">
-                                    <h4>Статус на данный момент</h4>
+                                <a href="#!">
+                                    <h4>Статус на данный момент: {!! $complain->type !!}</h4>
                                 </a>
-                                <p>Ваша жалоба была принята на рассмотрение! В течение 4-6 недель ждите обратной
+                                <p>Ваша жалоба была принята на рассмотрение <a style="color: #2b044d"
+                                                                               href="{{ route('official', $complain->facility->official->slug) }}">{!! $complain->facility->official->name !!}</a>
+                                    В течение 4-6 недель ждите обратной
                                     связи</p>
                             </div>
                         </div>
@@ -247,19 +194,9 @@
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
                             <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
-                                               onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btns" type="button"><i class="ti-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search
-                                </button>
+                                <a href="{{ route('new_complain') }}" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                   type="submit">Создать жалобу
+                                </a>
                             </form>
                         </aside>
                         <aside class="single_sidebar_widget post_category_widget">
@@ -305,42 +242,17 @@
                         </aside>
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Recent Post</h3>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                            @foreach($all_complains as $recent_complain)
+                                <div class="media post_item">
+                                    <img style="max-width: 100px" src="{{ asset($recent_complain->attachment) }}" alt="post">
+                                    <div class="media-body">
+                                        <a href="{{ route('complain', $complain->slug) }}">
+                                            <h3>{!! $recent_complain->name !!}</h3>
+                                        </a>
+                                        <p>{!! $recent_complain->created_at !!}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </aside>
 
                     </div>

@@ -6,6 +6,7 @@ use App\Models\Application;
 use App\Models\Category;
 use App\Models\Complain;
 use App\Models\Facility;
+use App\Models\Official;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -47,6 +48,16 @@ class PagesController extends Controller
         return view('pages.create_complain_form', compact('facilities'));
     }
 
+    public function official($slug)
+    {
+        $official = Official::where('slug', $slug)->first();
+        if (!$official) {
+            return abort(404);
+        }
+
+        return view('pages.official', compact('official'));
+    }
+
     public function about()
     {
         return view('pages.about');
@@ -71,7 +82,9 @@ class PagesController extends Controller
             return abort(404);
         }
 
-        return view('pages.complain', compact($complain));
+        $all_complains = Complain::all();
+
+        return view('pages.complain', compact('complain', 'all_complains'));
     }
 
     public function pages($slug)

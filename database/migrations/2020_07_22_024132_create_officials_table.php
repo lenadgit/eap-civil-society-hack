@@ -20,6 +20,7 @@ class CreateOfficialsTable extends Migration
             $table->string('phone')->nullable();
             $table->longText('description')->nullable();
             $table->string('position')->nullable();
+            $table->string('image')->nullable();
             $table->longText('slug')->nullable();
             $table->timestamps();
             $table->softDeletes();

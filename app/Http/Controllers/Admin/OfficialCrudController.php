@@ -35,6 +35,11 @@ class OfficialCrudController extends CrudController
 
         $this->crud->addColumns([
             [
+                'name' => 'image',
+                'label' => 'Image',
+                'type' => 'image',
+            ],
+            [
                 'name' => 'name',
                 'label' => 'Name'
             ],
@@ -57,6 +62,11 @@ class OfficialCrudController extends CrudController
         ]);
 
         $this->crud->addFields([
+            [
+                'name' => 'image', // The db column name
+                'label' => "Image", // Table column heading
+                'type' => 'browse',
+            ],
             [
                 'name' => 'name',
                 'label' => 'Name',

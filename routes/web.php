@@ -6,6 +6,7 @@ Route::namespace('Front')->group(function () {
     Route::get('contact', 'PagesController@contact');
     Route::get('map', 'PagesController@map')->name('map');
     Route::get('complain/{slug?}', 'PagesController@complain')->name('complain');
+    Route::get('official/{slug?}', 'PagesController@official')->name('official');
     Route::match(['get', 'post'], 'new_complain', 'PagesController@new_complain')->name('new_complain');
     Route::post('sendmail', 'PagesController@sendmail')->name('sendmail');
 });

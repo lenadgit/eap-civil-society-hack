@@ -25,6 +25,7 @@ class Official extends Model
             'name',
             'email',
             'phone',
+            'image',
             'description',
             'position',
             'slug',
