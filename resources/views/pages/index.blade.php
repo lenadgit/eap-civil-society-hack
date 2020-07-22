@@ -9,10 +9,9 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-md-9 ">
                             <div class="hero__caption">
-                                <span data-animation="fadeInUp" data-delay=".4s">App Landing Page</span>
-                                <h1 data-animation="fadeInUp" data-delay=".6s">Get things done<br>with Appco</h1>
-                                <p data-animation="fadeInUp" data-delay=".8s">Dorem ipsum dolor sitamet, consectetur
-                                    adipiscing elit, sed do eiusm tempor incididunt ulabore et dolore magna aliqua.</p>
+                                <span data-animation="fadeInUp" data-delay=".4s">Веб сервис</span>
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Все ремонтные работы и их финансирование<br>на карте города</h1>
+                                <p data-animation="fadeInUp" data-delay=".8s">Отслеживайте финансирование ремонтных работ с возможностью связаться с ответственными людьми напрямую!</p>
                                 <!-- Slider btn -->
                                 <div class="slider-btns">
                                     <!-- Hero-btn -->
@@ -72,7 +71,7 @@
                     <div class="row">
                         <div class="col-lg-10 col-md-10">
                             <div class="section-tittle">
-                                <h2>Some of the best features Of Our App!</h2>
+                                <h2>Применение сервиса</h2>
                             </div>
                         </div>
                     </div>
@@ -84,8 +83,8 @@
                                     <span class="flaticon-support"></span>
                                 </div>
                                 <div class="features-caption">
-                                    <h3>Easy to Costomize</h3>
-                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                    <h3>Отслеживание объектов</h3>
+                                    <p>Объекты по которым проводяться ремонтные работы</p>
                                 </div>
                             </div>
                         </div>
@@ -95,8 +94,8 @@
                                     <span class="flaticon-support"></span>
                                 </div>
                                 <div class="features-caption">
-                                    <h3>Extreme Security</h3>
-                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                    <h3>Ответственные лица</h3>
+                                    <p>Возможность просмотра финансирования и ответсвенных лиц</p>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +105,8 @@
                                     <span class="flaticon-support"></span>
                                 </div>
                                 <div class="features-caption">
-                                    <h3>Customer Support</h3>
-                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                    <h3>Вовлеченность граждан</h3>
+                                    <p>Возможность обсуждения пользователями качества по ходу выполнения работ</p>
                                 </div>
                             </div>
                         </div>
@@ -117,8 +116,8 @@
                                     <span class="flaticon-support"></span>
                                 </div>
                                 <div class="features-caption">
-                                    <h3>Creative Design</h3>
-                                    <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
+                                    <h3>Информирование</h3>
+                                    <p>Возможность пользователям добавлять на карту объекты требующие ремонта</p>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +137,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-tittle text-center">
-                        <h2>How Can We HelpYour<br>with Appco!</h2>
+                        <h2>Наши партнеры</h2>
                     </div>
                 </div>
             </div>
@@ -150,9 +149,8 @@
                             <span class="flaticon-businessman"></span>
                         </div>
                         <div class="service-cap">
-                            <h4><a href="#">Easily Manage</a></h4>
-                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
-                                laborea.</p>
+                            <h4><a href="https://eapcivilsociety.eu/ru/">Eastern Partnership Civil Society Facility</a></h4>
+                            <p>Организатор хакатона и главный спонсор</p>
                         </div>
                     </div>
                 </div>
@@ -162,9 +160,8 @@
                             <span class="flaticon-pay"></span>
                         </div>
                         <div class="service-cap">
-                            <h4><a href="#">Get Payments Easily</a></h4>
-                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
-                                laborea.</p>
+                            <h4><a href="https://en.wikipedia.org/wiki/European_Union">European Union</a></h4>
+                            <p>Медиа партнер</p>
                         </div>
                     </div>
                 </div>
@@ -174,9 +171,8 @@
                             <span class="flaticon-plane"></span>
                         </div>
                         <div class="service-cap">
-                            <h4><a href="#">Quick Messaging</a></h4>
-                            <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut
-                                laborea.</p>
+                            <h4><a href="https://www.gdsi.ie/">GDSI</a></h4>
+                            <p>Поддержка развития</p>
                         </div>
                     </div>
                 </div>
@@ -191,7 +187,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-xl-8">
                         <div class="section-tittle text-center">
-                            <h2>What Our Customers<br> Have to Say</h2>
+                            <h2>Клиенты которые <br>уже используют сервис</h2>
                         </div>
                     </div>
                 </div>
@@ -203,9 +199,8 @@
                                     <img src="{{ asset('front/images/shape/man1.png') }}" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
-                                        commodo consequat duis aute irure dolor in represse.</p>
+                                    <h4><a href="#">Чиновники ближе к народу!</a></h4>
+                                    <p>Оставил жалобу с помощью этого сайта, и через 5 дней получил детальный ответ о происходящем!</p>
                                 </div>
                             </div>
 
@@ -214,9 +209,8 @@
                                     <img src="{{ asset('front/images/shape/man2.png') }}" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
-                                        commodo consequat duis aute irure dolor in represse.</p>
+                                    <h4><a href="#">Ответ от чиновника лично на почту!</a></h4>
+                                    <p>Первый раз в жизни получил ответ на жалобу от чиновника лично.</p>
                                 </div>
                             </div>
 
@@ -225,9 +219,8 @@
                                     <img src="{{ asset('front/images/shape/man3.png') }}" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
-                                        commodo consequat duis aute irure dolor in represse.</p>
+                                    <h4><a href="#">Быстро реагируют</a></h4>
+                                    <p>Удивлена, как быстро отреагировали на мою жалобу. Раньше приходилось бы собираться под городским советом толпой народа.</p>
                                 </div>
                             </div>
 
@@ -236,9 +229,8 @@
                                     <img src="{{ asset('front/images/shape/man2.png') }}" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip ex ea
-                                        commodo consequat duis aute irure dolor in represse.</p>
+                                    <h4><a href="#">Отслеживаю ремонтные работы возле дома</a></h4>
+                                    <p>Смотрю что как и когда финансируеться на моей улице не выходя из дома.</p>
                                 </div>
                             </div>
 
@@ -255,8 +247,8 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="app-caption">
                         <div class="section-tittle section-tittle3">
-                            <h2>Our App Available For Any Device Download now</h2>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fug.</p>
+                            <h2>Подробное описание и правила использования сервиса</h2>
+                            <p>Прочитать подробнеее как это работает, можно перейдя по ссылке</p>
                             <div class="app-btn">
                                 <a href="#" class="app-btn1"><img src="{{ asset('front/images/shape/app_btn1.png') }}"
                                                                   alt=""></a>
@@ -288,12 +280,12 @@
             <div class="row justify-content-between align-items-center">
                 <div class="offset-xl-1 offset-lg-1 col-xl-5 col-lg-5">
                     <div class="say-something-cap">
-                        <h2>Say Hello To The Collaboration Hub.</h2>
+                        <h2>Остались вопросы?</h2>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3">
                     <div class="say-btn">
-                        <a href="#" class="btn radius-btn">Contact Us</a>
+                        <a href="#" class="btn radius-btn">Напишите нам!</a>
                     </div>
                 </div>
             </div>

@@ -47,7 +47,8 @@
                                     <p>{!! $official->email !!}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div>p
+
                         <div class="col-xl-12 col-lg-12 col-md-12">
                             <div class="single-features mb-70">
                                 <div class="features-icon">
