@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="section-top-border container" style="margin-top: 15%; margin-left: 24%">
+    <div class="section-top-border container" style="margin-top: 15%">
         <div class="row">
             <h2>ВОЙТИ​</h2>
             <div class="col-lg-8 col-md-8">

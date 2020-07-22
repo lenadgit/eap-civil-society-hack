@@ -27,13 +27,15 @@ class Complain extends Model
     protected $fillable =
         [
             'complain_number',
+            'name',
             'admin_id',
             'user_id',
             'description',
             'attachment',
             'type',
             'admin_note',
-            'facility_id'
+            'facility_id',
+            'slug',
         ];
 
     /*
@@ -86,7 +88,15 @@ class Complain extends Model
     |--------------------------------------------------------------------------
     */
 
+    protected static function boot()
+    {
+        parent::boot();
 
+        // auto-sets values on creation
+        static::creating(function ($query) {
+            $query->complain_number = rand(1000, 999999);
+        });
+    }
     /*
     |--------------------------------------------------------------------------
     | MUTATORS
@@ -100,7 +110,7 @@ class Complain extends Model
     {
         return [
             'slug' => [
-                'source' => 'complain_number',
+                'source' => 'name',
             ],
         ];
     }

@@ -24,156 +24,31 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
                         <div class="row">
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
+                            @foreach($complains as $complain)
+                                <div class="col-md-6">
+                                    <article class="blog_item">
+                                        <div class="blog_item_img">
+                                            <img class="card-img rounded-0"
+                                                 src="{{ asset($complain->attachment) }}" alt="">
+                                            <a href="#!" class="blog_item_date">
+                                                <p>{{ date('d.m.Y', strtotime($complain->created_at)) }}</p>
+                                            </a>
+                                        </div>
 
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6">
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <img class="card-img rounded-0"
-                                             src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>15</h3>
-                                            <p>Jan</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
-                                            <h2>Google inks pact for new 35-storey office</h2>
-                                        </a>
-                                        <p>That dominion stars lights dominion divide years for fourth have don't stars
-                                            is that
-                                            he earth it first without heaven in place seed it second morning saying.</p>
-                                        <ul class="blog-info-link">
-                                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                        </ul>
-                                    </div>
-                                </article>
-                            </div>
+                                        <div class="blog_details">
+                                            <a class="d-inline-block" href="{{ route('complain', $complain->slug) }}">
+                                                <h2>{!! $complain->name !!}</h2>
+                                            </a>
+                                            <p style="">{!! cutWords($complain->description) !!}</p>
+                                            <ul class="blog-info-link">
+                                                <li><a href="#!"><i class="fa fa-user"></i> {!! $complain->user->name !!}
+                                                    </a></li>
+                                                <li><a href="#!"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            @endforeach
                         </div>
 
                         <nav class="blog-pagination justify-content-center d-flex">
@@ -203,9 +78,9 @@
                         <aside class="single_sidebar_widget search_widget">
                             <form action="#">
 
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                <a href="{{ route('new_complain') }}" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                         type="submit">Создать жалобу
-                                </button>
+                                </a>
                             </form>
                         </aside>
 

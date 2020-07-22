@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Front;
 
 use App\Models\Application;
+use App\Models\Category;
+use App\Models\Complain;
+use App\Models\Facility;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,8 +23,28 @@ class PagesController extends Controller
 
     public function new_complain()
     {
-//        return 'salam';
-        return view('pages.create_complain_form');
+        if (\request()->isMethod('post')) {
+            $complain = new Complain();
+            $complain->name = request()->get('name');
+            $complain->facility_id = request()->get('facility_id');
+            $complain->description = request()->get('description');
+            $complain->user_id = \auth()->user()->id;
+
+            $attached = 'attachment';
+//              Saves complain attachment to upload/complains
+            if (\request()->hasFile($attached)) {
+                $file = \request()->file($attached);
+                $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path('uploads/complains'), $fileName);
+                $complain->{$attached} = asset('uploads/complains/' . $fileName);
+            }
+
+            $complain->save();
+        }
+
+        $facilities = Facility::all();
+
+        return view('pages.create_complain_form', compact('facilities'));
     }
 
     public function about()
@@ -36,12 +59,19 @@ class PagesController extends Controller
 
     public function map()
     {
-        return view('pages.map');
+        $complains = Complain::all();
+
+        return view('pages.map', compact('complains'));
     }
 
-    public function complain()
+    public function complain($slug)
     {
-        return view('pages.complain');
+        $complain = Complain::where('slug', $slug)->first();
+        if (!$complain) {
+            return abort(404);
+        }
+
+        return view('pages.complain', compact($complain));
     }
 
     public function pages($slug)

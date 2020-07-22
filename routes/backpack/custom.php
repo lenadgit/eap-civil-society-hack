@@ -18,6 +18,9 @@ Route::group([
     CRUD::resource('feedback', 'FeedbackCrudController');
     CRUD::resource('page', 'PageCrudController');
     CRUD::resource('partner', 'PartnerCrudController');
+    CRUD::resource('complain', 'ComplainCrudController');
+    CRUD::resource('facility', 'FacilityCrudController');
+    CRUD::resource('official', 'OfficialCrudController');
     CRUD::resource('admin', 'UserCrudController');
     CRUD::resource('application', 'ApplicationCrudController');
     CRUD::resource('slider', 'SliderCrudController');

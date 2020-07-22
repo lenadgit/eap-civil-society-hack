@@ -93,7 +93,7 @@ class Facility extends Model
     {
         return [
             'slug' => [
-                'source' => 'complain_number',
+                'source' => 'name',
             ],
         ];
     }

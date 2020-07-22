@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="section-top-border container" style="margin-top: 15%; margin-left: 24%">
+    <div class="section-top-border container" style="margin-top: 15%">
         <div class="row">
             <h2>РЕГИСТРАЦИЯ</h2>
 

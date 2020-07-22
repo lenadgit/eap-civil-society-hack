@@ -25,40 +25,50 @@
                             <img class="img-fluid" src="{{ asset('front/images/blog/single_blog_1.png') }}" alt="">
                         </div>
                         <div class="blog_details">
-                            <h2>Second divided from form fish beast made every of seas
-                                all gathered us saying he our
+                            <h2>{!!  $complain->name !!}
                             </h2>
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
                                 <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                             </ul>
                             <p class="excert">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you
+                                should have to spend money on boot camp when you can get the MCSE study materials
+                                yourself at a
                                 fraction of the camp price. However, who has the willpower
                             </p>
                             <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you
+                                should have to spend money on boot camp when you can get the MCSE study materials
+                                yourself at a
                                 fraction of the camp price. However, who has the willpower to actually sit through a
                                 self-imposed MCSE training. who has the willpower to actually
                             </p>
                             <div class="quote-wrapper">
                                 <div class="quotes">
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                    should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                                    a fraction of the camp price. However, who has the willpower to actually sit through a
+                                    MCSE boot camps have its supporters and its detractors. Some people do not
+                                    understand why you
+                                    should have to spend money on boot camp when you can get the MCSE study materials
+                                    yourself at
+                                    a fraction of the camp price. However, who has the willpower to actually sit through
+                                    a
                                     self-imposed MCSE training.
                                 </div>
                             </div>
                             <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you
+                                should have to spend money on boot camp when you can get the MCSE study materials
+                                yourself at a
                                 fraction of the camp price. However, who has the willpower
                             </p>
                             <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you
+                                should have to spend money on boot camp when you can get the MCSE study materials
+                                yourself at a
                                 fraction of the camp price. However, who has the willpower to actually sit through a
                                 self-imposed MCSE training. who has the willpower to actually
                             </p>
@@ -66,7 +76,8 @@
                     </div>
                     <div class="navigation-top">
                         <div class="d-sm-flex justify-content-between text-center">
-                            <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
+                            <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and
+                                4
                                 people like this</p>
                             <div class="col-sm-4 text-center my-2 my-sm-0">
                                 <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
@@ -104,7 +115,8 @@
                                 <a href="#">
                                     <h4>Статус на данный момент</h4>
                                 </a>
-                                <p>Ваша жалоба была принята на рассмотрение! В течение 4-6 недель ждите обратной связи</p>
+                                <p>Ваша жалоба была принята на рассмотрение! В течение 4-6 недель ждите обратной
+                                    связи</p>
                             </div>
                         </div>
                     </div>
@@ -118,8 +130,10 @@
                                     </div>
                                     <div class="desc">
                                         <p class="comment">
-                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
+                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill
+                                            which them
+                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea
+                                            lesser
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center">
@@ -144,8 +158,10 @@
                                     </div>
                                     <div class="desc">
                                         <p class="comment">
-                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
+                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill
+                                            which them
+                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea
+                                            lesser
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center">
@@ -170,8 +186,10 @@
                                     </div>
                                     <div class="desc">
                                         <p class="comment">
-                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
+                                            Multiply sea night grass fourth day sea lesser rule open subdue female fill
+                                            which them
+                                            Blessed, give fill lesser bearing multiply sea night grass fourth day sea
+                                            lesser
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center">
@@ -201,22 +219,26 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                                        <input class="form-control" name="name" id="name" type="text"
+                                               placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                                        <input class="form-control" name="email" id="email" type="email"
+                                               placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                                        <input class="form-control" name="website" id="website" type="text"
+                                               placeholder="Website">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
+                                <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -228,14 +250,16 @@
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder='Search Keyword'
-                                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Search Keyword'">
                                         <div class="input-group-append">
                                             <button class="btns" type="button"><i class="ti-search"></i></button>
                                         </div>
                                     </div>
                                 </div>
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
+                                        type="submit">Search
+                                </button>
                             </form>
                         </aside>
                         <aside class="single_sidebar_widget post_category_widget">

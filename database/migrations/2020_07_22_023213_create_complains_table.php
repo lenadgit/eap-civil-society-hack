@@ -16,6 +16,7 @@ class CreateComplainsTable extends Migration
         Schema::create('complains', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('complain_number');
+            $table->longText('name');
             $table->unsignedInteger('admin_id')->index()->nullable();
             $table->unsignedInteger('user_id')->index()->nullable();
             $table->unsignedInteger('facility_id')->index()->nullable();
@@ -23,6 +24,7 @@ class CreateComplainsTable extends Migration
             $table->string('attachment')->nullable();
             $table->enum('type', ['PENDING', 'CONSIDERATION', 'REJECTED','SOLVED'])->default('PENDING');
             $table->longText('admin_note')->nullable();
+            $table->longText('slug')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

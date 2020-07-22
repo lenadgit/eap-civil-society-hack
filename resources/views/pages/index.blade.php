@@ -16,13 +16,8 @@
                                 <!-- Slider btn -->
                                 <div class="slider-btns">
                                     <!-- Hero-btn -->
-                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html"
-                                       class="btn radius-btn">Download</a>
-                                    <!-- Video Btn -->
-                                    <a data-animation="fadeInRight" data-delay="1.0s"
-                                       class="popup-video video-btn ani-btn"
-                                       href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i
-                                            class="fas fa-play"></i></a>
+                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="{{ route('map') }}"
+                                       class="btn radius-btn">Перейти на карту</a>
                                 </div>
                             </div>
                         </div>
@@ -305,8 +300,10 @@
         </div>
         <!-- shape -->
         <div class="say-shape">
-            <img src="{{ asset('front/images/shape/say-shape-left.png') }}" alt="" class="say-shape1 rotateme d-none d-xl-block">
-            <img src="{{ asset('front/images/shape/say-shape-right.png') }}" alt="" class="say-shape2 d-none d-lg-block">
+            <img src="{{ asset('front/images/shape/say-shape-left.png') }}" alt=""
+                 class="say-shape1 rotateme d-none d-xl-block">
+            <img src="{{ asset('front/images/shape/say-shape-right.png') }}" alt=""
+                 class="say-shape2 d-none d-lg-block">
         </div>
     </div>
 @endsection

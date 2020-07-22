@@ -27,6 +27,7 @@ class Official extends Model
             'phone',
             'description',
             'position',
+            'slug',
         ];
 
     /*
