@@ -25,7 +25,7 @@
                         <div class="col-lg-6">
                             <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight"
                                  data-delay="1s">
-                                <img src="{{ asset('front/images/hero/hero_right.png') }}" alt="">
+                                <img src="{{ asset('front/images/hero/hero_right1.png') }}" alt="">
                             </div>
                         </div>
                     </div>

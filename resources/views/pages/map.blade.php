@@ -41,9 +41,13 @@
                                             </a>
                                             <p style="">{!! cutWords($complain->description) !!}</p>
                                             <ul class="blog-info-link">
-                                                <li><a href="#!"><i class="fa fa-user"></i> {!! $complain->user->name !!}
+                                                <li><a href="#!"><i
+                                                            class="fa fa-user"></i> {!! $complain->user->name !!}
                                                     </a></li>
-                                                <li><a href="#!"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                                <li>
+                                                    <a href="{{ route('official',$complain->facility->official->slug) }}"><i
+                                                            class="fa fa-user-secret"></i> {!! $complain->facility->official->name !!}
+                                                    </a></li>
                                             </ul>
                                         </div>
                                     </article>
@@ -76,12 +80,14 @@
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
+                            @if(Auth::check())
+                                <form action="#">
 
-                                <a href="{{ route('new_complain') }}" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Создать жалобу
-                                </a>
-                            </form>
+                                    <a href="{{ route('new_complain') }}" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                       type="submit">Создать жалобу
+                                    </a>
+                                </form>
+                            @endif
                         </aside>
 
                         <aside class="single_sidebar_widget post_category_widget">
